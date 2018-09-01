@@ -1,0 +1,28 @@
+<!--pages/property/property.wxml-->
+<view class="container">
+
+  <view class="page_hd">
+    <view class="page_hd_item">
+      <image src='../../image/wallet.png' style='width: 50px; height: 42px; padding-right: 10px; vertical-align: top'/>
+      <view style='display: inline-block; padding-top: 5px'>
+        <view>余额</view>
+        <view class="page_hd_content">¥0.00</view>
+      </view>
+    </view>
+    <view class="page_hd_item">
+      <image src='../../image/bank_card.png' style='width: 50px; height: 50px; padding-right: 10px; vertical-align: top'/>
+      <view style='display: inline-block; padding-top: 5px'>
+        <view>银行卡</view>
+        <view class="page_hd_content">管理银行卡</view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view wx:for="{{payChoose}}" class="payChoose">
+      <image src="{{item.img}}" class='choose_image'/>
+      <view class='title'>{{item.title}}</view>
+      <view class='content'>{{item.content}}</view>
+    </view>
+  </view>
+</view>

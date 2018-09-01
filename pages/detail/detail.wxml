@@ -1,0 +1,44 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="goods" wx:key="" wx:for-item="data" id="{{data.id}}">
+    <image src="{{data.goodsPic}}" style="width: 100%; height: 360px;"/>
+    <view class="recommend">
+      <view class="recommendTheme">{{data.recommendTheme}}</view>
+      <view class="recommendReason">{{data.recommendReason}}</view>
+      <view class="skuPrice">¥{{data.skuPrice}}</view>
+    </view>
+    <view class="choose-amount">
+      <view class="choose-title">数量</view>
+      <view class="choose-container">
+        <view class="border-style btn-reduce" bindtap="subNum">-</view>
+        <text class="border-style choose-input">{{data.position}}</text>
+        <view class="border-style btn-add" bindtap="addNum">+</view>
+      </view>
+    </view>
+  </view>
+
+    <!--额外信息-->
+    <view class="bottomBar">
+      <view class="optionBar">
+        <view class="bar_item">
+          <image src="../../image/detail_service.png" style="width: 20px; height: 20px; padding: 0 15px;" />
+          <view class="bar_item_text">客服</view>
+        </view>
+        <view class="bar_item">
+          <image src="../../image/detail_collect.png" style="width: 20px; height: 20px; padding: 0 15px;" />
+          <view class="bar_item_text">收藏</view>
+        </view>
+        <view class="bar_item" bindtap="goCart">
+          <image src="../../image/detail_cart.png" style="width: 20px; height: 20px; padding: 0 15px;" />
+          <view class="bar_item_text">购物车</view>
+        </view>
+      </view>
+      <view class="cartButton">
+        <view class="text" bindtap="addCart">加入购物车</view>                    
+      </view>
+      <view class="shopButton">
+        <view class="text">立即购买</view>
+      </view>
+    </view>
+
+</view>

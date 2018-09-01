@@ -1,0 +1,40 @@
+/* pages/property/property.wxss */
+.page_hd{
+  background: #555;
+  padding: 30px;
+}
+.page_hd_item{
+  width: 157px;
+  height: 50px;
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+}
+.page_hd_content{
+  font-size: 10px;
+  padding-top: 4px;
+}
+
+.payChoose{
+  width: 83px;
+  height: 93px;
+  padding: 15px 20px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #eee;
+}
+.choose_image{
+  width: 40px;
+  height: 40px;
+  padding: 0 21px;
+}
+.title{
+  padding: 5px 0; 
+  font-size: 14px;
+  text-align: center;
+}
+.content{
+  color: #888;
+  font-size: 10px;
+  text-align: center;
+}

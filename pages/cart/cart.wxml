@@ -1,0 +1,52 @@
+<view class="container">
+
+  <block wx:if="{{cart.length!=0}}">
+  <!--
+    <view wx:for="{{cart}}" wx:for-item="cart" id="{{cart.id}}" class="goods-container">
+      <image src="{{cart.shareImage}}" style="padding:0;" class="goods-image"/>
+      <view class="goods-describe">
+        <view class="recommendTheme">{{cart.recommendTheme}}</view>
+        <view class="skuPrice">¥{{cart.skuPrice}}</view>
+      </view>
+    </view>
+  -->
+<view class="list" wx:for="{{cart}}" id="{{item.data.id}}">
+  <view class="choose">
+    <view class="option {{item.data.jdSelection == true?'jdSelection':'jdSelection1'}}" data-num="{{index}}" bindtap="selected" ></view>
+  </view>
+  <view class="imgages">
+    <image class="navimg" src="{{item.data.shareImage}}"></image>
+  </view>
+  <view class="info">
+    <text class="title">{{item.data.recommendTheme}}</text>
+    <!--<text class="specify"></text>-->
+    <text class="charge">￥<text>{{item.data.skuPrice}}</text></text>
+    <view class="buy-num">
+      <text class="add" bindtap="addNum" data-num="{{index}}">+</text>
+      <text class="goodsNum">{{item.data.position}}</text>
+      <text class="sub" bindtap="subNum" data-num="{{index}}">-</text>
+    </view>
+  </view>
+</view>       
+    <!--底部-->
+    <view class="footer">
+      <view class="allchoice choose">
+        <view class="option {{selectAll == true?'selectedall':'selectedall1'}}" bindtap="selectedAll"></view>全选
+      </view>
+      <view bindtap="clearCart" class="clearBtu">删除</view>
+      <view class="gotonext">结算({{selectNum}}件)</view>
+      <view class="total">总计:
+        <text class="money">￥{{totalPrice}}</text>
+        <text class="other">不含运费,已优惠00.00</text>
+      </view> 
+    </view>
+  </block>
+
+  <view wx:else class="empty_img">
+    <view class="blank-cart">
+      <image src='../../image/blank.png' class='blank'></image>
+      <text class='blank-text'>购物车空空如也，快去逛逛吧～</text>
+    </view>
+  </view>
+
+</view>

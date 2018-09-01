@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="page_hd">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="wide-frontier">
+    <view class="wide-content">
+      <view class="wide-info">
+        <text class="my-setting">我的设置</text>
+        <image src='../../image/setting.png' style='width: 30px; height: 30px;'></image>
+      </view>
+    </view>
+    <view class="wide-content" catchtap="order">
+      <view class="wide-info">
+        <text class="my-setting">全部订单</text>
+        <image src='../../image/order.png' style='width: 30px; height: 30px;'></image>
+      </view>
+    </view>
+    <view class="wide-content">
+      <view class="wide-info">
+        <text class="my-setting">我的心愿</text>
+        <image src='../../image/express.png' style='width: 30px; height: 30px;'></image>
+      </view>
+    </view>
+    <view class="wide-content" catchtap="property">
+      <view class="wide-info">
+        <text class="my-setting">全部资产</text>
+        <image src='../../image/property.png' style='width: 30px; height: 30px;'></image>
+      </view>
+    </view>
+  </view>
+</view>

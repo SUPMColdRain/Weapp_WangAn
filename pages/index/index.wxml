@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="page_hd">
+
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" 
+    duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="search">
+      <view class="search_frame" bindtap="searchPage">
+        <image class="search_image" src="../../image/search.png"/>
+        <text class="search_value">请输入内容</text>
+      </view>
+    </view>
+
+    <view class="image-tag">
+      <image wx:for="{{tagImage}}" src="{{item}}" class="image-style"/>
+    </view>
+  </view>
+
+  <view class="page_content">
+    <text class="t_title">今日特惠</text>
+    <view class="total">
+      <text class="c_title">如何体验畅爽的蓝牙耳机</text>
+      <image src="https://img10.360buyimg.com/n7/jfs/t25822/204/263629277/243797/27b43fb6/5b6a5528N64961d49.jpg" class="de_con"/>
+    </view>
+  </view>
+  
+  <view class="page_tag">
+    <view class="tag_content">
+      <!--<view class="tag_title" wx:for="{{head}}">{{item.title}}</view>-->
+      <view class="tag_title">发现好货</view>
+      <view class="item-head" wx:for="{{list}}" wx:for-item="list" bindtap="goodsDetail" id="{{list.id}}">
+        <image src="{{list.goodsPic}}" style="width: 110px; height: 120px; padding-left: 20px"/>
+        <view class="item-title">{{list.recommendTheme}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/order/order.wxml-->
+<view>
+  <scroll-view scroll-x="true" class="weui-navbar">
+    <block wx:for="{{themes}}" wx:for-item="item">
+      <view id="{{item.id}}" bindtap="getTheme" class="weui-navbar_item {{curNav == item.id ? 'actived' : ''}}">{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>
