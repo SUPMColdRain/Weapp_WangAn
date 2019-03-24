@@ -1,1 +1,1 @@
-# WX App
+# WeChat App
